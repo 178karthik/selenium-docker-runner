@@ -3,7 +3,7 @@ services:
   vendor-portal:
     image: 178karthik/selenium-dockerize
     environment:
-      - BROWSER=chrome
+      - BROWSER=${BROWSER}
       - HUB_HOST=hub
       - THREAD_COUNT=3
       - TEST_SUITE=vendor-portal.xml
@@ -13,7 +13,7 @@ services:
   flight-reservation:   
       image: 178karthik/selenium-dockerize
       environment:
-        - BROWSER=firefox
+        - BROWSER=${BROWSER}
         - HUB_HOST=hub
         - THREAD_COUNT=4
         - TEST_SUITE=flight-reservation.xml
